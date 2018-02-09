@@ -63,9 +63,9 @@ let uncurry (arg1 : 'a) (arg2 : 'b) : 'c =
   | arg1, arg2 -> (arg1, arg2)
 ;; *)
 
-let curry = failwith "plus not implemented" ;;
+let curry = fun _ -> failwith "curry not implemented" ;;
 
-let uncurry = failwith "plus not implemented" ;;
+let uncurry = fun _ -> failwith "uncurry not implemented" ;;
 
 (*......................................................................
 Exercise 2: OCaml's built in binary operators, like ( + ) and ( * ) are
@@ -144,7 +144,8 @@ instead of an int.
   | list -> Some (mlist2 list)
 ;; *)
 
-let max_list = failwith "plus not implemented" ;;
+let max_list (lst : int list) : int option =
+  failwith "max_list not implemented" ;;
 
 (*......................................................................
 Exercise 5: Write a function to return the smaller of two int options,
