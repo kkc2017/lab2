@@ -45,7 +45,9 @@ uncurry: 'a * 'b
 Now implement the two functions curry and uncurry.
 ......................................................................*)
 
-let curry (f : ('a * 'b) -> 'c) : (new_f : 'a -> ('b -> 'c)) =
+(* Code from lab:
+
+  let curry (f : ('a * 'b) -> 'c) : (new_f : 'a -> ('b -> 'c)) =
   f ()
   match f with
   | () -> failwith "empty tuple"
@@ -59,7 +61,11 @@ let uncurry (arg1 : 'a) (arg2 : 'b) : 'c =
   match arg1, arg2 with
   |
   | arg1, arg2 -> (arg1, arg2)
-;;
+;; *)
+
+let curry = failwith "plus not implemented" ;;
+
+let uncurry = failwith "plus not implemented" ;;
 
 (*......................................................................
 Exercise 2: OCaml's built in binary operators, like ( + ) and ( * ) are
@@ -126,7 +132,9 @@ Reimplement max_list, but this time, it should return an int option
 instead of an int.
 ......................................................................*)
 
-let rec max_list (lst : int list) : int option =
+(* Code from lab:
+
+  let rec max_list (lst : int list) : int option =
   let lst = hd :: tl in
   let mlist2 (lst: int list) : int =
     mlist2 hd (mlist2 tl)
@@ -134,7 +142,9 @@ let rec max_list (lst : int list) : int option =
   | [] -> None
   | [elt] -> Some elt
   | list -> Some (mlist2 list)
-;;
+;; *)
+
+let max_list = failwith "plus not implemented" ;;
 
 (*......................................................................
 Exercise 5: Write a function to return the smaller of two int options,
